@@ -25,7 +25,7 @@ void handle_SIGTSTP_f(int signo)
 // SIGTSTP handler that exits foreground only mode
 void handle_SIGTSTP(int signo)
 {
-    e_flag = 0;
+    	e_flag = 0;
 	char *message = "Exiting foreground-only mode\n";
 	write(STDOUT_FILENO, message, 29);
 	fflush(stdout);
@@ -81,7 +81,7 @@ int main (int argc, char **argv)
 		char *ptr;
 		char *orig = commandPrompt; 
 		char newCommandPrompt[2048];
-    	newCommandPrompt[0] = '\0';
+    		newCommandPrompt[0] = '\0';
 		char *newCommand;
 
 		// check if there is an instance of $$
